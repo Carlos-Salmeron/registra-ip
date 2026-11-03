@@ -67,6 +67,7 @@ export default function RegistrarObra() {
   <span style={{ fontWeight: paso === 3 ? 'bold' : 'normal', color: paso === 3 ? '#600733' : '#333' }}>Paso 3</span>
   <span style={{ fontWeight: paso === 4 ? 'bold' : 'normal', color: paso === 4 ? '#600733' : '#333' }}>Paso 4</span>
 </div>
+
       <hr style={{ marginBottom: '20px' }} />
 
       {/* PASO 1: Subir archivo */}
