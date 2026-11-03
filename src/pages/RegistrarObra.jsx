@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { generarCertificado } from '../utils/generarCertificado';
 
 export default function RegistrarObra() {
   const [paso, setPaso] = useState(1);
@@ -150,11 +151,17 @@ export default function RegistrarObra() {
           {mensajeExito ? (
             <div>
               <p style={{ color: 'green', fontWeight: 'bold' }}>{mensajeExito}</p>
+              <button
+                onClick={() => generarCertificado({ titulo, autor, folioFinal: folioGenerado })}
+                style={{ padding: '10px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', marginTop: '15px' }}
+              >
+                Descargar certificado
+              </button>
             </div>
           ) : (
             <div>
               <p>Presione el botón para enviar los datos y guardar la obra en el servidor backend.</p>
-              <button 
+              <button
                 onClick={handleConfirmarRegistro}
                 style={{ padding: '10px 20px', backgroundColor: '#600733', color: 'white', border: 'none', cursor: 'pointer', borderRadius: '4px' }}
               >
