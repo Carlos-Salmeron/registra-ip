@@ -25,6 +25,13 @@ export default function Dashboard() {
       ) : (
         <p>No hay usuario activo.</p>
       )}
+
+      <button
+        onClick={() => navigate('/registrar-obra')}
+        style={{ padding: '10px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', marginRight: '15px' }}
+      >
+        Ir a Registrar Obra
+      </button>
       
       <button 
         onClick={handleCerrarSesion}
